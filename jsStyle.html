@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling with JavaScript</title>
+    <style type="text/css">
+        .footNote{
+            font-size: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My essay on franknstein</h1>
+    <p>The central theam of marry shellies franknstyn is in the text(1)</p>
+</body>
+<script>
+    var footNote = document.createElement("p");
+    footNote.innerHTML = "1. Frenkanstayne <i>Is book</i>"
+    footNote.setAttribute("style" , "font-size: 7px; color: red;")
+    document.body.appendChild(footNote)
+    var footNote2 = document.createElement("p")
+    footNote2.innerHTML = "2. Paige 4 of Pherainkenstiyen"
+    footNote2.setAttribute("class", "footNote")
+    document.body.appendChild(footNote2);
+</script>
+</html>

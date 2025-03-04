@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.(attribute) vs setAttribute</title>
+</head>
+<body>
+    <h1>.(attribute) vs setAttribute</h1>
+
+    <p id="crash">Inspect the p tags to see how using the . notation is different from setAttribute</p>
+    <p id="bingus">Another pharagraph</p>
+    <script>
+        var para = document.getElementById("crash")
+        //this wont work because font size needs to be written as fontSize
+        //para.style.fontSize = "50px;"
+        para.setAttribute("style", "font-size: 50px;")
+        var para2 = document.getElementById("bingus")
+        para2.style.color = "red"
+        para.style.fontSize = "25px"
+        
+    </script>
+</body>
+</html>
