@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript coord plane example</title>
+    <style>
+        html, body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+        }
+        div{
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #coordinates{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>Click on page to see the x - y coords of the document</div>
+    <div id="coordinates"></div>
+    <script>
+        //get full xy coords
+        document.addEventListener("click", getXY);
+        //we dont have to use the word event for an event handler.
+        function getXY(e){
+            var x = "X: " + e.x;
+            var y = "Y: " + e.y;
+            var coord = document.getElementById("coordinates")
+            coord.innerHTML = x + " " + y;
+        }
+    </script>
+</body>
+</html>

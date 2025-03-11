@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Keyboard with key events</title>
+    <style>
+        #textbox{
+            border: 1px dotted green;
+            height: 200px;
+            width: 80%;
+            margin: 20px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Updated keyboard with key events</h3>
+    <p>Type using your keyboard.<br>make sure you click insice</p>
+    <div id="textbox"></div>
+    <script>
+        document.body.addEventListener("keydown", makeText);
+        function makeText(e){
+            var div = document.getElementById("textbox");
+            if(e.key != "Shift"){
+                var keyText = e.key;
+                var text = div.innerHTML;
+                text += keyText;
+                div.innerHTML = text;
+            }
+        }
+    </script>
+</body>
+</html>
