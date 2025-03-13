@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key logger</title>
+</head>
+<body>
+    <h2>Key logger</h2>
+    <p>Keys pressed: <span id="keysPressed"></span></p>
+    <script>
+        let keys = [];
+        document.addEventListener("keydown", function(event){
+            if(!keys.includes(event.key)){
+                keys.push(event.key);
+                document.getElementById("keysPressed").textContent = keys.join(", ")
+            }
+        });
+        document.addEventListener("keyup", function(event){
+            keys = key.filter(k => k !== event.key);
+            document.getElementById("keysPressed").textContent = keys.join(", ")
+        });
+    </script>
+</body>
+</html>
